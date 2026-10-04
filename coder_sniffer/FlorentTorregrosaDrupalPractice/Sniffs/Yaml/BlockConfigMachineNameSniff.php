@@ -36,8 +36,7 @@ class BlockConfigMachineNameSniff implements Sniff
     public function register()
     {
         return [T_INLINE_HTML];
-
-    }//end register()
+    }
 
 
     /**
@@ -65,9 +64,9 @@ class BlockConfigMachineNameSniff implements Sniff
         }
 
         if (!isset($info['id']) && !isset($info['theme'])) {
-          // If there is no 'id' and 'theme' this can be a config translation,
-          // we ignore this file.
-          return ($phpcsFile->numTokens + 1);
+            // If there is no 'id' and 'theme' this can be a config translation,
+            // we ignore this file.
+            return ($phpcsFile->numTokens + 1);
         }
 
         $block_id = $info['id'];
@@ -80,8 +79,5 @@ class BlockConfigMachineNameSniff implements Sniff
 
         // Only run this sniff once per file.
         return ($phpcsFile->numTokens + 1);
-
-    }//end process()
-
-
-}//end class
+    }
+}
