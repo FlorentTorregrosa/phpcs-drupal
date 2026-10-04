@@ -7,6 +7,7 @@ use FlorentTorregrosaDrupalPractice\Test\CoderSniffUnitTest;
 class BlockConfigMachineNameUnitTest extends CoderSniffUnitTest
 {
 
+
     /**
      * Returns a list of test files that should be checked.
      *
@@ -17,12 +18,12 @@ class BlockConfigMachineNameUnitTest extends CoderSniffUnitTest
     protected function getTestFiles($testFileBase): array
     {
         return [
-            __DIR__.'/language/fr/block.block.bartik_help.yml',
-            __DIR__.'/block.block.bartik_help.yml',
-            __DIR__.'/block.block.wrong_help.yml',
+            __DIR__ . '/language/fr/block.block.bartik_help.yml',
+            __DIR__ . '/block.block.bartik_help.yml',
+            __DIR__ . '/block.block.wrong_help.yml',
         ];
+    }
 
-    }//end getTestFiles()
 
     /**
      * Returns the lines where errors should occur.
@@ -37,8 +38,8 @@ class BlockConfigMachineNameUnitTest extends CoderSniffUnitTest
     protected function getErrorList(string $testFile): array
     {
         return [];
+    }
 
-    }//end getErrorList()
 
     /**
      * Returns the lines where warnings should occur.
@@ -58,7 +59,5 @@ class BlockConfigMachineNameUnitTest extends CoderSniffUnitTest
         default:
             return [];
         }
-
-    }//end getWarningList()
-
-}//end class
+    }
+}

@@ -5,6 +5,11 @@
   <!-- All Drupal code files must be UTF-8 encoded and we treat them as such. -->
   <arg name="encoding" value="utf-8"/>
 
+  <rule ref="Internal.NoCodeFound">
+    <!-- Non-PHP files (YAML, etc.) are expected to have no PHP code. -->
+    <exclude-pattern>*</exclude-pattern>
+  </rule>
+
   <!-- Ignore various version control directories. -->
   <exclude-pattern>*/\.git/*</exclude-pattern>
   <exclude-pattern>*/\.svn/*</exclude-pattern>
